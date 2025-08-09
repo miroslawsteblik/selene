@@ -1,0 +1,21 @@
+.venv/
+data/
+
+*.pyc
+__pycache__/
+*.pyo
+*.egg
+*.egg-info/
+.mypy_cache/
+
+# Environment files (NEVER commit actual secrets)
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+
+# Keep template
+!.env.example
+
+_archive/

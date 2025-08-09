@@ -1,0 +1,153 @@
+2025-08-09 13:45:35,639 -  ERROR - Configuration loading failed: Failed to load configuration: Database password is required
+2025-08-09 13:50:16,353 -  INFO - Configuration loaded successfully
+2025-08-09 13:50:16,354 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 13:50:16,369 -  ERROR - Failed to initialize connection pool: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-08-09 13:52:36,320 -  INFO - Configuration loaded successfully
+2025-08-09 13:52:36,320 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 13:52:36,331 -  ERROR - Failed to initialize connection pool: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-08-09 14:26:51,868 -  INFO - Configuration loaded successfully
+2025-08-09 14:26:51,869 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 14:26:51,888 -  ERROR - Failed to initialize connection pool: connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-08-09 14:44:40,052 -  INFO - Configuration loaded successfully
+2025-08-09 14:44:40,053 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 14:44:40,067 -  INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 14:44:40,067 -  INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 14:44:40,068 -  ERROR - Error getting connection: permission denied for schema public
+LINE 2:                     CREATE TABLE IF NOT EXISTS market_data (
+                                                       ^
+
+2025-08-09 14:46:51,933 -  INFO - Configuration loaded successfully
+2025-08-09 14:46:51,933 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 14:46:51,942 -  INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 14:46:51,943 -  INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 14:46:51,944 -  ERROR - Error getting connection: permission denied for schema public
+LINE 2:                     CREATE TABLE IF NOT EXISTS market_data (
+                                                       ^
+
+2025-08-09 14:49:20,935 -  INFO - Configuration loaded successfully
+2025-08-09 14:49:20,935 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 14:49:20,942 -  INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 14:49:20,942 -  INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 14:49:22,070 -  INFO - Fetching complete. Success rate: 100.00%
+2025-08-09 14:49:22,070 -  INFO - Closing database connections
+2025-08-09 14:49:22,070 -  INFO - All database connections closed
+2025-08-09 14:57:20,588 -  INFO - Configuration loaded successfully
+2025-08-09 14:57:20,588 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 14:57:20,597 -  INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 14:57:20,598 -  INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 14:57:21,848 -  INFO - Fetching complete. Success rate: 100.00%
+2025-08-09 14:57:21,848 -  INFO - Closing database connections
+2025-08-09 14:57:21,849 -  INFO - All database connections closed
+2025-08-09 15:18:01,612 -  INFO - Configuration loaded successfully
+2025-08-09 15:18:01,612 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 15:18:01,621 -  INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 15:18:01,621 -  INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 15:18:02,809 -  INFO - Fetching complete. Success rate: 100.00%
+2025-08-09 15:18:02,809 -  INFO - Closing database connections
+2025-08-09 15:18:02,809 -  INFO - All database connections closed
+2025-08-09 15:18:18,647 -  INFO - Configuration loaded successfully
+2025-08-09 15:18:18,648 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 15:18:18,657 -  INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 15:18:18,657 -  INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 15:18:19,721 -  INFO - Fetching complete. Success rate: 100.00%
+2025-08-09 15:18:19,721 -  INFO - Closing database connections
+2025-08-09 15:18:19,722 -  INFO - All database connections closed
+2025-08-09 15:23:41,950 -  INFO - Configuration loaded successfully
+2025-08-09 15:23:41,950 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 15:23:41,956 -  INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 15:23:41,957 -  INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 15:23:43,010 -  INFO - Fetching complete. Success rate: 100.00%
+2025-08-09 15:23:43,013 -  INFO - Closing database connections
+2025-08-09 15:23:43,013 -  INFO - All database connections closed
+2025-08-09 15:23:51,289 -  INFO - Configuration loaded successfully
+2025-08-09 15:23:51,289 -  INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 15:23:51,298 -  INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 15:23:51,299 -  INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 15:23:52,480 -  INFO - Fetching complete. Success rate: 0.00%
+2025-08-09 15:23:52,480 -  INFO - Closing database connections
+2025-08-09 15:23:52,480 -  INFO - All database connections closed
+2025-08-09 15:35:27,375 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-09 15:35:27,375 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 15:35:27,384 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 15:35:27,385 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 15:35:28,319 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-09 15:35:28,320 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-09 15:35:28,320 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-09 15:35:58,669 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-09 15:35:58,670 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 15:35:58,676 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 15:35:58,677 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 15:35:59,404 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-09 15:35:59,404 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-09 15:35:59,404 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-09 16:15:04,375 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-09 16:15:04,376 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 16:15:04,389 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 16:15:04,390 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 16:15:04,731 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-09 16:15:04,996 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:15:05,106 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:15:05,213 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:15:05,320 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:15:05,322 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-09 16:15:05,322 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-09 16:15:05,322 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-09 16:15:05,322 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-09 16:16:38,476 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-09 16:16:38,476 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 16:16:38,482 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 16:16:38,482 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 16:16:38,810 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-09 16:16:39,078 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:16:39,340 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:16:39,446 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:16:39,552 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:16:39,553 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-09 16:16:39,554 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-09 16:16:39,554 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-09 16:16:39,554 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-09 16:26:43,386 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-09 16:26:43,386 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 16:26:43,396 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 16:26:43,396 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 16:26:43,728 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-09 16:26:43,994 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:26:44,257 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:26:44,522 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:26:44,630 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:26:44,632 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-09 16:26:44,632 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-09 16:26:44,632 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-09 16:26:44,632 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-09 16:48:40,579 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-09 16:48:40,580 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 16:48:40,594 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 16:48:40,594 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 16:48:40,943 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-09 16:48:41,052 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:48:41,313 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:48:41,422 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:48:41,531 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 16:48:41,533 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-09 16:48:41,533 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-09 16:48:41,533 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-09 16:48:41,533 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-09 17:10:24,897 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-09 17:10:24,897 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 17:10:24,908 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 17:10:24,908 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 17:10:25,119 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-09 17:10:25,233 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 17:10:25,341 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 17:10:25,609 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 17:10:25,718 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 17:10:25,719 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-09 17:10:25,719 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-09 17:10:25,719 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-09 17:10:25,719 - selene.infrastructure.database.connection_factory - INFO - All database connections closed

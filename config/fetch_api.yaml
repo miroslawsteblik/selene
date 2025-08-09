@@ -1,0 +1,14 @@
+api:
+  base_url: 'https://www.alphavantage.co/query'
+  timeout_seconds: 30
+  retry_attempts: 3
+  rate_limit_per_minute: 60
+
+# Database connection settings
+database:
+  host: localhost
+  port: 5432
+  database: selene
+  user: postgres
+  min_connection: 1
+  max_connection: 10

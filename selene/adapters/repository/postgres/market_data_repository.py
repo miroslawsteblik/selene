@@ -21,31 +21,6 @@ class PostgresMarketDataRepository(MarketDataRepositoryPort):
         self.db = connection_factory
         self._ensure_tables()
 
-    # @contextmanager
-    # def _get_connection(self) -> Generator:
-    #     """
-    #     Context manager for database connections.
-
-    #     Yields:
-    #         A database connection from the pool
-    #     """
-    #     conn = None
-    #     try:
-
-    #         conn = self.db.get_connection()
-    #         if conn is None:
-    #             raise RuntimeError("Failed to obtain database connection")
-    #         yield conn
-    #     except Exception as e:
-    #         print(f"Error during database operation: {e}")
-
-    #         if conn:
-    #             conn.rollback()
-    #         raise
-    #     finally:
-    #         if conn:
-    #             self.db.release_connection(conn)
-
     def _ensure_tables(self) -> None:
         """Create tables if they don't exist"""
         with self.db.get_connection() as conn:

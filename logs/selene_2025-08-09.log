@@ -1,0 +1,13 @@
+2025-08-09 23:18:52,232 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-09 23:18:52,232 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-09 23:18:52,253 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-09 23:18:52,254 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-09 23:18:52,450 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-09 23:18:52,567 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 23:18:52,672 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 23:18:52,942 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 23:18:53,052 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-09 23:18:53,053 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-09 23:18:53,053 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-09 23:18:53,053 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-09 23:18:53,053 - selene.infrastructure.database.connection_factory - INFO - All database connections closed

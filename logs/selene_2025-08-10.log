@@ -1,0 +1,134 @@
+2025-08-10 05:36:20,122 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 05:36:20,122 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 05:36:20,140 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 05:36:20,140 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 05:36:20,613 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-10 05:36:21,568 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 4, Failed: 0, Validation errors: 0
+2025-08-10 05:36:21,568 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 100.00%
+2025-08-10 05:36:21,569 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 05:36:21,569 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-10 06:15:41,378 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 06:15:41,378 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 06:15:41,389 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 06:15:41,390 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 06:15:41,689 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-10 06:15:42,491 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 4, Failed: 0, Validation errors: 0
+2025-08-10 06:15:42,491 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 100.00%
+2025-08-10 06:15:42,491 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 06:15:42,491 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-10 21:47:34,352 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 21:47:34,352 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 21:47:34,367 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 21:47:34,368 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 21:52:38,247 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 21:52:38,247 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 21:52:38,254 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 21:52:38,254 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 21:52:38,615 - selene.adapters.cli.cli_handler - ERROR - ❌ Invalid configuration: Failed to authenticate with API
+2025-08-10 21:56:37,560 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 21:56:37,560 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 21:56:37,567 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 21:56:37,567 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 21:56:37,712 - selene.adapters.cli.cli_handler - ERROR - ❌ Invalid configuration: Failed to authenticate with API
+2025-08-10 22:15:15,498 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 22:15:15,499 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 22:15:15,512 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 22:15:15,512 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 22:15:15,514 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-10 22:15:15,869 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for GLOBAL_QUOTE.']
+2025-08-10 22:15:15,976 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for GLOBAL_QUOTE.']
+2025-08-10 22:15:16,081 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for GLOBAL_QUOTE.']
+2025-08-10 22:15:16,347 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for GLOBAL_QUOTE.']
+2025-08-10 22:15:16,348 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-10 22:15:16,348 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-10 22:15:16,348 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 22:15:16,349 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-10 22:19:32,719 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 22:19:32,719 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 22:19:32,725 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 22:19:32,725 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 22:19:32,726 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-10 22:19:33,050 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for GLOBAL_QUOTE.']
+2025-08-10 22:19:33,163 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for GLOBAL_QUOTE.']
+2025-08-10 22:19:33,270 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for GLOBAL_QUOTE.']
+2025-08-10 22:19:33,378 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: Invalid API call. Please retry or visit the documentation (https://www.alphavantage.co/documentation/) for GLOBAL_QUOTE.']
+2025-08-10 22:19:33,380 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-10 22:19:33,380 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-10 22:19:33,380 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 22:19:33,380 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-10 22:37:16,873 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 22:37:16,873 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 22:37:16,882 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 22:37:16,882 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 22:37:16,884 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-10 22:37:17,214 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: the parameter apikey is invalid or missing. Please claim your free API key on (https://www.alphavantage.co/support/#api-key). It should take less than 20 seconds.']
+2025-08-10 22:37:17,319 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: the parameter apikey is invalid or missing. Please claim your free API key on (https://www.alphavantage.co/support/#api-key). It should take less than 20 seconds.']
+2025-08-10 22:37:17,424 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: the parameter apikey is invalid or missing. Please claim your free API key on (https://www.alphavantage.co/support/#api-key). It should take less than 20 seconds.']
+2025-08-10 22:37:17,526 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response", 'API Error: the parameter apikey is invalid or missing. Please claim your free API key on (https://www.alphavantage.co/support/#api-key). It should take less than 20 seconds.']
+2025-08-10 22:37:17,529 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-10 22:37:17,529 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-10 22:37:17,530 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 22:37:17,530 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-10 22:41:57,854 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 22:41:57,854 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 22:41:57,861 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 22:41:57,861 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 22:41:57,863 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-10 22:41:58,542 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 4, Failed: 0, Validation errors: 0
+2025-08-10 22:41:58,543 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 100.00%
+2025-08-10 22:41:58,543 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 22:41:58,543 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-10 22:59:18,573 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 22:59:18,573 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 22:59:18,580 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 22:59:18,581 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 22:59:18,582 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-10 22:59:19,292 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-10 22:59:19,399 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-10 22:59:19,401 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 2, Failed: 2, Validation errors: 0
+2025-08-10 22:59:19,401 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 50.00%
+2025-08-10 22:59:19,401 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 22:59:19,401 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-10 23:14:44,513 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 23:14:44,514 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 23:14:44,522 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 23:14:44,523 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 23:14:44,525 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 0 symbols: []
+2025-08-10 23:14:44,525 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 0, Validation errors: 0
+2025-08-10 23:14:44,525 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-10 23:14:44,525 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 23:14:44,525 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-10 23:27:59,734 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 23:27:59,734 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 23:27:59,744 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 23:27:59,744 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 23:27:59,746 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 0 symbols: []
+2025-08-10 23:27:59,746 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 0, Validation errors: 0
+2025-08-10 23:27:59,746 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-10 23:27:59,746 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 23:27:59,748 - selene.infrastructure.database.connection_factory - INFO - All database connections closed
+2025-08-10 23:32:20,811 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-10 23:32:20,812 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-10 23:32:20,821 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-10 23:32:20,821 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-10 23:32:20,823 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-10 23:32:21,149 - selene.adapters.service.alpha_vantage_api - INFO - Response: 200 {
+    "Information": "We have detected your API key as VCS6B1P9A78GY5VJ and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+}
+2025-08-10 23:32:21,152 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for AAPL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-10 23:32:21,415 - selene.adapters.service.alpha_vantage_api - INFO - Response: 200 {
+    "Information": "We have detected your API key as VCS6B1P9A78GY5VJ and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+}
+2025-08-10 23:32:21,417 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for GOOGL: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-10 23:32:21,532 - selene.adapters.service.alpha_vantage_api - INFO - Response: 200 {
+    "Information": "We have detected your API key as VCS6B1P9A78GY5VJ and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+}
+2025-08-10 23:32:21,534 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for MSFT: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-10 23:32:21,636 - selene.adapters.service.alpha_vantage_api - INFO - Response: 200 {
+    "Information": "We have detected your API key as VCS6B1P9A78GY5VJ and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+}
+2025-08-10 23:32:21,639 - selene.domains.market_data.service.market_data_service - ERROR - Mapping error for TSLA: Data mapping failed: API schema validation failed: ["Missing 'Global Quote' in API response"]
+2025-08-10 23:32:21,640 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 0, Failed: 4, Validation errors: 0
+2025-08-10 23:32:21,640 - selene.adapters.cli.cli_handler - INFO - Fetching complete. Success rate: 0.00%
+2025-08-10 23:32:21,641 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-10 23:32:21,641 - selene.infrastructure.database.connection_factory - INFO - All database connections closed

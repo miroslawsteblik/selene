@@ -18,11 +18,13 @@ class MarketDataService:
         data_mapper: DataMapperPort,
         market_data_repository: MarketDataRepositoryPort,
         api_log_repository: APILogRepositoryPort,
+        symbols: List[str],
     ):
         self.api_port = api_port
         self.data_mapper = data_mapper
         self.market_data_repository = market_data_repository
         self.api_log_repository = api_log_repository
+        self.symbols = symbols or []
         self.logger = AppLoggerFactory.create_logger(__name__)
 
     def fetch_and_store_market_data(self, symbols: List[str]) -> Dict[str, Any]:

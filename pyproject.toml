@@ -21,7 +21,11 @@ dependencies = [
     "psycopg2-binary>=2.9.0",
     "sqlalchemy>=2.0.0",
     "pyodbc>=4.0.0",  # For MSSQL via ODBC
-    "python-dotenv>=1.1.1"
+    "python-dotenv>=1.1.1",
+    "types-PyYAML",
+    "types-requests",
+    "types-python-dotenv"
+    
 ]
 
 # pip install -e .[dev]  | pip install -e ".[dev]"

@@ -7,8 +7,6 @@ from selene.adapters.cli.argument_parser import ArgumentParser, CLIArguments
 from selene.application.containers.market_data_container import MarketDataContainer
 from selene.infrastructure.logging.logger_factory import AppLoggerFactory
 
-# from dotenv import load_dotenv
-
 
 class CLIHandler:
     """Handles command-line interface concerns."""
@@ -74,9 +72,9 @@ class CLIHandler:
         # Create and run application
         container = MarketDataContainer(args.config)
         use_case = container.create_use_case()
-        symbols = ["AAPL", "GOOGL", "MSFT", "TSLA"]
+
         try:
-            result = use_case.execute(symbols)
+            result = use_case.execute()
             success_rate = result["summary"]["success_rate"]
             self.logger.info(
                 "Fetching complete. Success rate: %.2f%%", success_rate * 100
@@ -104,6 +102,4 @@ class CLIHandler:
     def _handle_error(self, message: str, exit_code: int) -> int:
         """Standardized error handling."""
         self.logger.error("❌ %s", message)
-        return exit_code
-        return exit_code
         return exit_code

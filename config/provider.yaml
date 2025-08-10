@@ -1,0 +1,47 @@
+provider:
+  name: alphavantage
+  description: Alpha Vantage API for financial data
+  website: 'https://www.alphavantage.co'
+  base_url: 'https://www.alphavantage.co/query'
+  timeout_seconds: 30
+  retry_attempts: 3
+  rate_limit_per_minute: 60
+  endpoints:
+    - name: time_series_daily
+      method: GET
+      params:
+        - name: function
+          required: true
+          type: string
+          default: 'TIME_SERIES_DAILY'
+        - name: symbol
+          required: true
+          type: string
+        - name: apikey
+          required: true
+          type: string
+
+  name: ons.uk
+  description: UK Office for National Statistics
+  website: 'https://www.ons.gov.uk'
+  base_url: 'https://api.beta.ons.gov.uk/v1'
+  endpoints:
+    - name: get_population_estimates
+      method: GET
+      params:
+        - name: area
+          required: true
+          type: string
+        - name: year
+          required: true
+          type: integer
+
+# Database connection settings
+database:
+  name: postgres
+  host: localhost
+  port: 5432
+  database: selene
+  user: postgres
+  min_connection: 1
+  max_connection: 10

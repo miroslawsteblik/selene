@@ -1,6 +1,6 @@
 import sys
 
-from toolbox.adapters.cli.cli_handler import CLIHandler
+from selene.adapters.cli.cli_handler import CLIHandler
 
 
 def main() -> None:
@@ -15,5 +15,5 @@ if __name__ == "__main__":
     main()
 
 
-# toolbox --help
-# toolbox run --config path/to/config.yaml
+# selene --help
+# selene run --config path/to/config.yaml

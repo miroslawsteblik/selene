@@ -8,17 +8,18 @@ from selene.adapters.repository.postgres.market_data_repository import (
 )
 from selene.adapters.service.alpha_vantage_api import AlphaVantageAPI
 from selene.adapters.service.api_data_mapper import SafeDataMapper
+from selene.application.use_cases.fetch_market_data_use_case import (
+    FetchMarketDataUseCase,
+)
 from selene.domains.market_data.service.market_data_service import MarketDataService
-from selene.infrastructure.database.connection_factory import PostgresConnectionFactory
-from selene.infrastructure.database.db_config import DatabaseConnectionConfig
-from selene.infrastructure.logging.logger_factory import AppLoggerFactory
-
-from ...application.use_cases.fetch_market_data_use_case import FetchMarketDataUseCase
-from ...infrastructure.configuration.config_loader import (
+from selene.infrastructure.configuration.config_loader import (
     ConfigurationError,
     ConfigurationLoader,
 )
-from ...infrastructure.configuration.market_data_config import MarketDataConfig
+from selene.infrastructure.configuration.market_data_config import MarketDataConfig
+from selene.infrastructure.database.connection_factory import PostgresConnectionFactory
+from selene.infrastructure.database.db_config import DatabaseConnectionConfig
+from selene.infrastructure.logging.logger_factory import AppLoggerFactory
 
 
 class MarketDataContainer:
@@ -37,11 +38,11 @@ class MarketDataContainer:
                 self._config = self._config_loader.load_config()
                 self._logger.info("Configuration loaded successfully")
             except ConfigurationError as e:
-                self._logger.error(f"Configuration loading failed: {e}")
+                self._logger.error("Configuration loading failed: %s", e)
                 raise
             except Exception as e:
-                self._logger.error(f"Unexpected error loading configuration: {e}")
-                raise ConfigurationError(f"Failed to load configuration: {e}")
+                self._logger.error("Unexpected error loading configuration: %s", e)
+                raise ConfigurationError(f"Failed to load configuration: {e}") from e
 
         return self._config
 
@@ -61,14 +62,13 @@ class MarketDataContainer:
         self._connection_factory.initialize()
 
         # Create adapters
-        api_adapter = AlphaVantageAPI(config.api.api_key, config.api.base_url)
-        data_mapper = SafeDataMapper()
+        api_adapter = AlphaVantageAPI(config.api.base_url, config.api.params)
+        data_mapper = SafeDataMapper(config.schema)
         market_data_repo = PostgresMarketDataRepository(self._connection_factory)
         api_log_repo = PostgresAPILogRepository(self._connection_factory)
 
-        # Authenticate API
-        if not api_adapter.authenticate():
-            raise ValueError("Failed to authenticate with API")
+        symbols = config.api.symbols
+        print(f"Symbols to fetch: {symbols}")
 
         # Create domain service
         market_data_service = MarketDataService(
@@ -76,6 +76,7 @@ class MarketDataContainer:
             data_mapper=data_mapper,
             market_data_repository=market_data_repo,
             api_log_repository=api_log_repo,
+            symbols=symbols,
         )
 
         # Create use case
@@ -89,5 +90,4 @@ class MarketDataContainer:
         ):
             self._logger.info("Closing database connections")
             self._connection_factory.close()
-            # Mark as None, type ignored as it's cleared on exit
             self._connection_factory = None  # type: ignore

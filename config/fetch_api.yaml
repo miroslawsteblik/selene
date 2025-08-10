@@ -1,8 +1,38 @@
 api:
+  name: alphavantage
+  description: Alpha Vantage API for financial data
+  website: 'https://www.alphavantage.co'
   base_url: 'https://www.alphavantage.co/query'
   timeout_seconds: 30
   retry_attempts: 3
   rate_limit_per_minute: 60
+  default_endpoint: global_quote  # Specify which endpoint to use by default
+  endpoints:
+    - name: global_quote
+      method: GET
+      params:
+        - name: function
+          required: true
+          type: string
+          default: 'GLOBAL_QUOTE'
+        - name: symbol
+          required: true
+          type: string
+        - name: apikey
+          required: true
+          type: string
+      schema:
+        price_path: ["Global Quote", "05. price"]
+        volume_path: ["Global Quote", "06. volume"]
+        market_cap_path: null
+        pe_ratio_path: null
+        timestamp_path: ["Global Quote", "07. latest trading day"]
+        validation_keys: ["Global Quote"]
+  symbols:
+    - "AAPL"
+    - "GOOGL"
+    - "MSFT"
+    - "TSLA"
 
 # Database connection settings
 database:

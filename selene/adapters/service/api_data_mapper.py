@@ -9,17 +9,22 @@ from selene.ports.market_data.service.api_data_mapper import DataMapperPort
 class SafeDataMapper(DataMapperPort):
     """Safe implementation of DataMapperPort with error handling."""
 
-    def __init__(self) -> None:
+    def __init__(self, schema_config: Optional[Dict[str, Any]] = None) -> None:
         # Define expected schema mappings with fallbacks
-        self.schema_mappings = {
-            "alpha_vantage": {
-                "price_path": ["Global Quote", "05. price"],
-                "volume_path": ["Global Quote", "06. volume"],
-                "market_cap_path": None,  # Not available in Alpha Vantage
-                "pe_ratio_path": None,  # Not available in Alpha Vantage
-                "timestamp_path": ["Global Quote", "07. latest trading day"],
+        if schema_config:
+            self.schema_mappings = {"api": schema_config}
+        else:
+            # Default to alpha_vantage global_quote schema
+            self.schema_mappings = {
+                "api": {
+                    "price_path": ["Global Quote", "05. price"],
+                    "volume_path": ["Global Quote", "06. volume"],
+                    "market_cap_path": None,
+                    "pe_ratio_path": None,
+                    "timestamp_path": ["Global Quote", "07. latest trading day"],
+                    "validation_keys": ["Global Quote"],
+                }
             }
-        }
 
     def map_to_market_data(self, api_data: Dict[str, Any], symbol: str) -> MarketData:
         """Safely map API data to MarketData entity"""
@@ -31,15 +36,10 @@ class SafeDataMapper(DataMapperPort):
 
         try:
             # Extract data with safe navigation
-            price = self._safe_extract_decimal(
-                api_data, self.schema_mappings["alpha_vantage"]["price_path"]
-            )
-            volume = self._safe_extract_int(
-                api_data, self.schema_mappings["alpha_vantage"]["volume_path"]
-            )
-            timestamp = self._safe_extract_datetime(
-                api_data, self.schema_mappings["alpha_vantage"]["timestamp_path"]
-            )
+            schema = self.schema_mappings["api"]
+            price = self._safe_extract_decimal(api_data, schema["price_path"])
+            volume = self._safe_extract_int(api_data, schema["volume_path"])
+            timestamp = self._safe_extract_datetime(api_data, schema["timestamp_path"])
 
             return MarketData(
                 symbol=symbol.upper(),
@@ -53,19 +53,21 @@ class SafeDataMapper(DataMapperPort):
             )
 
         except Exception as e:
-            raise ValueError(f"Failed to map API data for symbol {symbol}: {str(e)}")
+            raise ValueError(
+                f"Failed to map API data for symbol {symbol}: {str(e)}"
+            ) from e
 
     def validate_api_schema(self, api_data: Dict[str, Any]) -> List[str]:
         """Validate API response has expected structure"""
         errors = []
 
-        # if not isinstance(api_data, dict):
-        #     errors.append("API response is not a dictionary")
-        #     return errors
+        # Validate required keys based on schema configuration
+        schema = self.schema_mappings["api"]
+        validation_keys = schema.get("validation_keys", [])
 
-        # Check for Alpha Vantage specific structure
-        if "Global Quote" not in api_data:
-            errors.append("Missing 'Global Quote' in API response")
+        for key in validation_keys:
+            if key not in api_data:
+                errors.append(f"Missing '{key}' in API response")
 
         # Check for error messages in API response
         if "Error Message" in api_data:

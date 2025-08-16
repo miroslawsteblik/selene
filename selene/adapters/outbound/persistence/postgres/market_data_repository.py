@@ -9,7 +9,7 @@ from selene.domains.market_data.entities.market_data import (
     MarketData,
 )
 from selene.infrastructure.database.connection_factory import PostgresConnectionFactory
-from selene.ports.market_data.repository.market_data_ports import (
+from selene.ports.outbound.market_data_repository_port import (
     MarketDataRepositoryPort,
 )
 

@@ -3,10 +3,10 @@ from decimal import Decimal, InvalidOperation
 from typing import Any, Dict, List, Optional
 
 from selene.domains.market_data.entities.market_data import DataSource, MarketData
-from selene.ports.market_data.service.api_data_mapper import DataMapperPort
+from selene.ports.outbound.api_data_mapper import DataMapperPort
 
 
-class SafeDataMapper(DataMapperPort):
+class DataMapper(DataMapperPort):
     """Safe implementation of DataMapperPort with error handling."""
 
     def __init__(self, schema_config: Optional[Dict[str, Any]] = None) -> None:

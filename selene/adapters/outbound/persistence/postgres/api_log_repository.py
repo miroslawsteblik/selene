@@ -4,7 +4,7 @@ from typing import List
 
 from selene.domains.market_data.entities.api_log import APILog
 from selene.infrastructure.database.connection_factory import PostgresConnectionFactory
-from selene.ports.market_data.repository.api_log_ports import APILogRepositoryPort
+from selene.ports.outbound.api_log_repository_port import APILogRepositoryPort
 
 
 class PostgresAPILogRepository(APILogRepositoryPort):

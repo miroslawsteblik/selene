@@ -2,12 +2,14 @@ from typing import Any, Dict, List
 
 from selene.domains.market_data.entities.api_log import APILog
 from selene.infrastructure.logging.logger_factory import AppLoggerFactory
-from selene.ports.market_data.repository.api_log_ports import APILogRepositoryPort
-from selene.ports.market_data.repository.market_data_ports import (
+from selene.ports.outbound.api_log_repository_port import (
+    APILogRepositoryPort,
+)
+from selene.ports.outbound.market_data_repository_port import (
     MarketDataRepositoryPort,
 )
-from selene.ports.market_data.service.api_data_mapper import DataMapperPort
-from selene.ports.market_data.service.market_data_api import MarketDataAPIPort
+from selene.ports.outbound.api_data_mapper import DataMapperPort
+from selene.ports.outbound.market_data_api import MarketDataAPIPort
 
 
 class MarketDataService:

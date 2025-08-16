@@ -1,0 +1,65 @@
+2025-08-16 22:50:16,641 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
+2025-08-16 22:50:16,642 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
+2025-08-16 22:50:16,683 - selene.infrastructure.database.connection_factory - INFO - Connected to PostgreSQL: PostgreSQL 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-16 22:50:16,684 - selene.infrastructure.database.connection_factory - INFO - PostgreSQL connection pool initialized successfully
+2025-08-16 22:50:16,690 - selene.domains.market_data.service.market_data_service - INFO - Starting market data fetch for 4 symbols: ['AAPL', 'GOOGL', 'MSFT', 'TSLA']
+2025-08-16 22:50:16,920 - selene.adapters.outbound.external_apis.alpha_vantage_api - INFO - Response: 200 {
+    "Global Quote": {
+        "01. symbol": "AAPL",
+        "02. open": "234.0000",
+        "03. high": "234.2800",
+        "04. low": "229.3350",
+        "05. price": "231.5900",
+        "06. volume": "56038657",
+        "07. latest trading day": "2025-08-15",
+        "08. previous close": "232.7800",
+        "09. change": "-1.1900",
+        "10. change percent": "-0.5112%"
+    }
+}
+2025-08-16 22:50:17,059 - selene.adapters.outbound.external_apis.alpha_vantage_api - INFO - Response: 200 {
+    "Global Quote": {
+        "01. symbol": "GOOGL",
+        "02. open": "203.8500",
+        "03. high": "206.4400",
+        "04. low": "201.2800",
+        "05. price": "203.9000",
+        "06. volume": "34931422",
+        "07. latest trading day": "2025-08-15",
+        "08. previous close": "202.9400",
+        "09. change": "0.9600",
+        "10. change percent": "0.4730%"
+    }
+}
+2025-08-16 22:50:17,337 - selene.adapters.outbound.external_apis.alpha_vantage_api - INFO - Response: 200 {
+    "Global Quote": {
+        "01. symbol": "MSFT",
+        "02. open": "522.7700",
+        "03. high": "526.1000",
+        "04. low": "519.0800",
+        "05. price": "520.1700",
+        "06. volume": "25213272",
+        "07. latest trading day": "2025-08-15",
+        "08. previous close": "522.4800",
+        "09. change": "-2.3100",
+        "10. change percent": "-0.4421%"
+    }
+}
+2025-08-16 22:50:17,461 - selene.adapters.outbound.external_apis.alpha_vantage_api - INFO - Response: 200 {
+    "Global Quote": {
+        "01. symbol": "TSLA",
+        "02. open": "337.6550",
+        "03. high": "339.3000",
+        "04. low": "327.0200",
+        "05. price": "330.5600",
+        "06. volume": "74319792",
+        "07. latest trading day": "2025-08-15",
+        "08. previous close": "335.5800",
+        "09. change": "-5.0200",
+        "10. change percent": "-1.4959%"
+    }
+}
+2025-08-16 22:50:17,467 - selene.domains.market_data.service.market_data_service - INFO - Fetch completed. Success: 4, Failed: 0, Validation errors: 0
+2025-08-16 22:50:17,467 - selene.adapters.inbound.cli.cli_handler - INFO - Fetching complete. Success rate: 100.00%
+2025-08-16 22:50:17,467 - selene.application.containers.market_data_container - INFO - Closing database connections
+2025-08-16 22:50:17,467 - selene.infrastructure.database.connection_factory - INFO - All database connections closed

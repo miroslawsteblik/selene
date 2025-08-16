@@ -1,3 +1,5 @@
+# domains/market_data/entities/market_data.py
+
 from dataclasses import dataclass, field
 from datetime import datetime
 from decimal import Decimal
@@ -31,9 +33,7 @@ class MarketData:
     data_timestamp: Optional[datetime] = None
     source: DataSource = DataSource.API
     status: DataStatus = DataStatus.PENDING
-    raw_data: Dict[str, Any] = field(
-        default_factory=dict
-    )  # Store original API response
+    raw_data: Dict[str, Any] = field(default_factory=dict)
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
 

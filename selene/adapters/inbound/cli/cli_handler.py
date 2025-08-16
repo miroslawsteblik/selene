@@ -3,7 +3,7 @@ from typing import Any, Optional
 
 import yaml
 
-from selene.adapters.cli.argument_parser import ArgumentParser, CLIArguments
+from selene.adapters.inbound.cli.argument_parser import ArgumentParser, CLIArguments
 from selene.application.containers.market_data_container import MarketDataContainer
 from selene.infrastructure.logging.logger_factory import AppLoggerFactory
 

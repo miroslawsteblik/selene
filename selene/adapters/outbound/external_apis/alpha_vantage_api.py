@@ -5,7 +5,7 @@ import requests
 
 from selene.domains.market_data.value_objects.api_response import APIResponse
 from selene.infrastructure.logging.logger_factory import AppLoggerFactory
-from selene.ports.market_data.service.market_data_api import MarketDataAPIPort
+from selene.ports.outbound.market_data_api import MarketDataAPIPort
 
 
 class AlphaVantageAPI(MarketDataAPIPort):

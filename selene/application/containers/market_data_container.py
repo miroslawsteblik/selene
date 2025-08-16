@@ -1,13 +1,13 @@
 from typing import Optional
 
-from selene.adapters.repository.postgres.api_log_repository import (
+from selene.adapters.outbound.external_apis.alpha_vantage_api import AlphaVantageAPI
+from selene.adapters.outbound.external_apis.api_data_mapper import DataMapper
+from selene.adapters.outbound.persistence.postgres.api_log_repository import (
     PostgresAPILogRepository,
 )
-from selene.adapters.repository.postgres.market_data_repository import (
+from selene.adapters.outbound.persistence.postgres.market_data_repository import (
     PostgresMarketDataRepository,
 )
-from selene.adapters.service.alpha_vantage_api import AlphaVantageAPI
-from selene.adapters.service.api_data_mapper import SafeDataMapper
 from selene.application.use_cases.fetch_market_data_use_case import (
     FetchMarketDataUseCase,
 )
@@ -63,7 +63,7 @@ class MarketDataContainer:
 
         # Create adapters
         api_adapter = AlphaVantageAPI(config.api.base_url, config.api.params)
-        data_mapper = SafeDataMapper(config.schema)
+        data_mapper = DataMapper(config.schema)
         market_data_repo = PostgresMarketDataRepository(self._connection_factory)
         api_log_repo = PostgresAPILogRepository(self._connection_factory)
 

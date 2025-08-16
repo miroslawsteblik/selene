@@ -5,7 +5,7 @@ from selene.domains.market_data.entities.market_data import MarketData
 
 
 class MarketDataRepositoryPort(ABC):
-
+    """Port for market data persistence."""
     @abstractmethod
     def save(self, market_data: MarketData) -> MarketData:
         """Save market data to the repository."""

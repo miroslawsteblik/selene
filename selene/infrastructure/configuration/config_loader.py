@@ -14,7 +14,7 @@ from selene.infrastructure.database.db_config import DatabaseConnectionConfig
 class ConfigurationLoader:
     """Loads and validates configuration from YAML files and environment variables"""
 
-    def __init__(self, config_path: str = "config"):
+    def __init__(self, config_path: str):
         self.config_path = Path(config_path)
         self.env_loader = EnvironmentLoader()
 
@@ -44,24 +44,24 @@ class ConfigurationLoader:
         # Build API config - use first available endpoint or specified default
         api_data = yaml_config.get("api", {})
         endpoints = api_data.get("endpoints", [])
-        
+
         # Get default endpoint or first available
         default_endpoint = api_data.get("default_endpoint")
         if default_endpoint:
             selected_endpoint = next(
-                (ep for ep in endpoints if ep.get("name") == default_endpoint), 
+                (ep for ep in endpoints if ep.get("name") == default_endpoint),
                 endpoints[0] if endpoints else {}
             )
         else:
             selected_endpoint = endpoints[0] if endpoints else {}
-            
+
         params = {
             p["name"]: p["default"]
             for p in selected_endpoint.get("params", [])
             if "default" in p
         }
         params["apikey"] = self.env_loader.get_secret("ALPHA_VANTAGE_API_KEY")
-        
+
         # Extract schema configuration from selected endpoint
         schema_config = selected_endpoint.get("schema", {})
 

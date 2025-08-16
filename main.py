@@ -1,6 +1,6 @@
 import sys
 
-from selene.adapters.cli.cli_handler import CLIHandler
+from selene.adapters.inbound.cli.cli_handler import CLIHandler
 
 
 def main() -> None:
@@ -16,4 +16,4 @@ if __name__ == "__main__":
 
 
 # selene --help
-# selene run --config path/to/config.yaml
+# selene run --config resources/fetch_api.yaml

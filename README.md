@@ -16,30 +16,8 @@ selene is designed to:
 
 ### Clean Architecture Implementation
 
-The project follows **Clean Architecture** and **Hexagonal Architecture** patterns:
+The project follows **Clean Architecture** and **Hexagonal Architecture** patterns.
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Adapters      │    │   Application   │    │     Domain      │
-│   (External)    │    │   (Use Cases)   │    │  (Business)     │
-├─────────────────┤    ├─────────────────┤    ├─────────────────┤
-│ • CLI Handler   │    │ • Use Cases     │    │ • Entities      │
-│ • API Clients   │◄───┤ • Containers    │◄───┤ • Services      │
-│ • Repositories  │    │ • Orchestration │    │ • Value Objects │
-│ • Data Mappers  │    │                 │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         ▲                       ▲                       ▲
-         │                       │                       │
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│ Infrastructure  │    │      Ports      │    │   Configuration │
-│                 │    │  (Interfaces)   │    │                 │
-├─────────────────┤    ├─────────────────┤    ├─────────────────┤
-│ • Database      │    │ • Repository    │    │ • Config Loader │
-│ • Logging       │    │ • API Ports     │    │ • Env Variables │
-│ • Connection    │    │ • Service Ports │    │ • Validation    │
-│   Management    │    │                 │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-```
 
 ### Core Components
 
@@ -57,9 +35,9 @@ The project follows **Clean Architecture** and **Hexagonal Architecture** patter
 #### 3. **Adapters Layer** (`adapters/`)
 
 - **CLI**: Command-line interface handling
-- **Repositories**: Data persistence implementations
-- **APIs**: External service integrations (`AlphaVantageAPI`)
-- **Mappers**: Data transformation between layers
+- **Persistence**: Database persistence implementations
+- **External APIs**: External service integrations (`AlphaVantageAPI`)
+
 
 #### 4. **Infrastructure Layer** (`infrastructure/`)
 
@@ -70,8 +48,6 @@ The project follows **Clean Architecture** and **Hexagonal Architecture** patter
 #### 5. **Ports** (`ports/`)
 
 - **Interfaces**: Abstract contracts between layers
-- **Repository Ports**: Data access interfaces
-- **Service Ports**: External service interfaces
 
 ## 🔧 Key Features
 
@@ -122,7 +98,7 @@ The project follows **Clean Architecture** and **Hexagonal Architecture** patter
 1. **Clone the repository**:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/miroslawsteblik/selene.git
    cd selene
    ```
 
@@ -142,7 +118,7 @@ The project follows **Clean Architecture** and **Hexagonal Architecture** patter
 4. **Configure database**:
 
    ```yaml
-   # config/fetch_api.yaml
+   # resources/fetch_api.yaml
    database:
      host: localhost
      port: 5432
@@ -162,20 +138,20 @@ The project follows **Clean Architecture** and **Hexagonal Architecture** patter
 
 ```bash
 # Fetch market data
-selene fetch --config config/fetch_api.yaml
+selene fetch --config resources/fetch_api.yaml
 
 # Verbose logging
-selene fetch --config config/fetch_api.yaml --verbose
+selene fetch --config resources/fetch_api.yaml --verbose
 
 # Quiet mode
-selene fetch --config config/fetch_api.yaml --quiet
+selene fetch --config resources/fetch_api.yaml --quiet
 ```
 
 #### Configuration
 
 The system uses a two-tier configuration approach:
 
-1. **YAML Configuration** (`config/fetch_api.yaml`):
+1. **YAML Configuration** (`resources/fetch_api.yaml`):
 
    ```yaml
    api:
@@ -201,70 +177,6 @@ The system uses a two-tier configuration approach:
    DB_PORT=5432       # optional override
    ```
 
-## 📊 Architecture Highlights
-
-### Dependency Injection
-
-```python
-# Container manages all dependencies
-container = MarketDataContainer(config_path)
-use_case = container.create_use_case()
-result = use_case.execute(symbols)
-```
-
-### Clean Separation of Concerns
-
-```python
-# Domain Service (business logic)
-class MarketDataService:
-    def fetch_and_store_market_data(self, symbols: List[str]) -> Dict[str, Any]
-
-# Use Case (application logic)
-class FetchMarketDataUseCase:
-    def execute(self, symbols: List[str]) -> Dict[str, Any]
-
-# Adapter (infrastructure)
-class AlphaVantageAPI:
-    def get_market_data(self, symbol: str) -> APIResponse
-```
-
-### Repository Pattern
-
-```python
-# Port (interface)
-class MarketDataRepositoryPort:
-    def save(self, market_data: MarketData) -> MarketData
-
-# Adapter (implementation)
-class PostgresMarketDataRepository(MarketDataRepositoryPort):
-    def save(self, market_data: MarketData) -> MarketData
-```
-
-## 🛡️ Quality Assurance
-
-### Code Quality Tools
-
-- **Black**: Code formatting
-- **isort**: Import sorting
-- **Pylint**: Static analysis
-- **MyPy**: Type checking
-- **Pytest**: Unit testing
-
-### Configuration
-
-```toml
-# pyproject.toml
-[tool.black]
-line-length = 88
-
-[tool.pylint]
-max-line-length = 88
-disable = ["C0111", "C0103", "R0903", "E1101", "E0611"]
-
-[tool.mypy]
-strict_equality = true
-ignore_missing_imports = true
-```
 
 ## 📈 Monitoring & Observability
 
@@ -296,7 +208,7 @@ ignore_missing_imports = true
 ## 🔍 Example Output
 
 ```bash
-$ selene fetch --config config/fetch_api.yaml --verbose
+$ selene fetch --config resources/fetch_api.yaml --verbose
 
 2025-08-09 14:57:20,588 - selene.application.containers.market_data_container - INFO - Configuration loaded successfully
 2025-08-09 14:57:20,588 - selene.infrastructure.database.connection_factory - INFO - Initializing PostgreSQL connection pool: 1-10 connections
@@ -306,38 +218,7 @@ $ selene fetch --config config/fetch_api.yaml --verbose
 2025-08-09 14:57:21,848 - selene.application.containers.market_data_container - INFO - Closing database connections
 ```
 
-## 📋 Project Structure
 
-```
-selene/
-├── adapters/           # External interfaces
-│   ├── cli/           # Command-line interface
-│   ├── repository/    # Data persistence
-│   └── service/       # External services
-├── application/       # Use cases and orchestration
-│   ├── containers/    # Dependency injection
-│   └── use_cases/     # Application logic
-├── domains/           # Business logic
-│   └── market_data/   # Market data domain
-├── infrastructure/    # Cross-cutting concerns
-│   ├── configuration/ # Config management
-│   ├── database/      # Database infrastructure
-│   └── logging/       # Logging system
-├── ports/             # Interfaces/contracts
-│   └── market_data/   # Domain ports
-├── config/            # Configuration files
-├── logs/              # Log files (auto-created)
-└── main.py            # Application entry point
-```
-
-## 🤝 Contributing
-
-1. Follow the existing architecture patterns
-2. Maintain clean separation between layers
-3. Add comprehensive logging to new features
-4. Include type hints for all public APIs
-5. Write tests for business logic
-6. Update documentation for architectural changes
 
 ## 📝 License
 

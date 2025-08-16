@@ -7,6 +7,7 @@ name = "selene"
 version = "1.0.0"
 description = "A tool for connecting and transforming data from various sources"
 readme = "README.md"
+license = {text = "MIT"}
 authors = [
     { name = "Miroslaw Steblik", email = "miroslawsteblik@gmail.com" }
 ]
@@ -25,7 +26,7 @@ dependencies = [
     "types-PyYAML",
     "types-requests",
     "types-python-dotenv"
-    
+
 ]
 
 # pip install -e .[dev]  | pip install -e ".[dev]"
